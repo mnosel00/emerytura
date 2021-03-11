@@ -2,11 +2,13 @@
 
 namespace ConsoleAppInterakcja
 {
-    const int WIEK_EMERYTALNY = 65;
+    
     class Program
     {
+        
         static void Main(string[] args)
         {
+            int WIEKEMERYTALNY = 65;
             Console.WriteLine("Witaj!");
             Console.Write("Podaj imię: "); //cw tab tab (od razu leci )
            string imie = Console.ReadLine(); // zapisanie imienia do zmiennej
@@ -25,13 +27,13 @@ namespace ConsoleAppInterakcja
             //string napis = Console.ReadLine();
             int wiek = int.Parse(Console.ReadLine());
 
-            if(wiek >= WIEK_EMERYTALNY)
+            if(wiek >= WIEKEMERYTALNY)
             {
                 Console.WriteLine("Jesteś emerytem");
             }
             else
             {
-                Console.WriteLine($"Do emerytury zostało ci {WIEK_EMERYTALNY - wiek} lat.");
+                Console.WriteLine($"Do emerytury zostało ci {WIEKEMERYTALNY - wiek} lat.");
             }
 
 
