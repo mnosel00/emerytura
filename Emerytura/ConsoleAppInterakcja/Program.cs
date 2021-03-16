@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace ConsoleAppInterakcja
 {
@@ -8,33 +9,39 @@ namespace ConsoleAppInterakcja
         
         static void Main(string[] args)
         {
-            int WIEKEMERYTALNY = 65;
-            Console.WriteLine("Witaj!");
-            Console.Write("Podaj imię: "); //cw tab tab (od razu leci )
-           string imie = Console.ReadLine(); // zapisanie imienia do zmiennej
-          
-
-            Console.WriteLine("Podaj nazwisko"); //cw tab tab (od razu leci )
-            string nazwisko = Console.ReadLine(); //zapisanie nazwiska
-
-            Console.WriteLine("Witaj "+ imie +""+ nazwisko + "!");
-            Console.WriteLine($"Witaj {imie} {nazwisko} !"); //szablon napisu
-            Console.WriteLine(string.Format("Witaj {0} {1}!",nazwisko,imie));
 
 
-            //zabawa z liczba
-            Console.Write("Podaj Wiek: ");
-            //string napis = Console.ReadLine();
-            int wiek = int.Parse(Console.ReadLine());
-
-            if(wiek >= WIEKEMERYTALNY)
+            long suma = 0;
+            long sumak = 0;
+            while (true)
             {
-                Console.WriteLine("Jesteś emerytem");
+                string napis = Console.ReadLine();
+                string[] tab = napis.Split(' ');
+
+                if (string.IsNullOrEmpty(napis))
+                {
+                    Console.WriteLine(sumak);
+                    break;
+                }
+                else
+                {
+                    for (int i = 0; i < tab.Length; i++)
+                    {
+                        suma += int.Parse(tab[i]);
+                        sumak += int.Parse(tab[i]);
+                     
+                    }
+                    Console.WriteLine(suma);
+                    
+                    suma = 0;
+                    
+                }
+               
+                
+
+
             }
-            else
-            {
-                Console.WriteLine($"Do emerytury zostało ci {WIEKEMERYTALNY - wiek} lat.");
-            }
+           
 
 
 
