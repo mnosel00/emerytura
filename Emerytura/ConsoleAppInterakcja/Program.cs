@@ -7,7 +7,7 @@ namespace ConsoleAppInterakcja
     class Program
     {
         
-        static void Main(string[] args)
+        static void Main()
         {
 
 
@@ -16,7 +16,7 @@ namespace ConsoleAppInterakcja
             while (true)
             {
                 string napis = Console.ReadLine();
-                string[] tab = napis.Split(' ');
+                
 
                 if (string.IsNullOrEmpty(napis))
                 {
@@ -25,6 +25,7 @@ namespace ConsoleAppInterakcja
                 }
                 else
                 {
+                    string[] tab = napis.Split(' ');
                     for (int i = 0; i < tab.Length; i++)
                     {
                         suma += int.Parse(tab[i]);
@@ -38,13 +39,8 @@ namespace ConsoleAppInterakcja
                 }
                
                 
-
-
             }
-           
-
-
-
+          
 
         }
     }
